@@ -1,193 +1,203 @@
-/* styles.css */
-
-/* General */
+/* Estilo global */
 body {
     font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f39c12; /* Naranja */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
 }
 
-h1, h2 {
-    color: #333;
+/* Encabezado principal */
+.main-header {
     text-align: center;
+    background-color: #333;
+    color: #f39c12;
+    padding: 20px;
 }
 
-p {
-    color: #555;
-    margin: 10px 0;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-header {
-    background: #f4f4f4;
-    padding: 20px 0;
-    border-bottom: 2px solid #ddd;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-header p {
+.intro-text {
     font-size: 1.2em;
-    color: #666;
+    margin-top: 10px;
+    color: #f39c12;
 }
 
-/* Navigation */
+/* Navegación */
+.navbar {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
 .navbar ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background: #007BFF;
-    margin: 0;
 }
 
 .navbar ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-.navbar ul li a {
-    color: white;
-    padding: 10px 15px;
-    display: block;
-}
-
-.navbar ul li a:hover {
-    background: #0056b3;
+.navbar a {
+    text-decoration: none;
+    color: #f39c12;
+    font-weight: bold;
+    padding: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
+.navbar a:hover {
+    background-color: #e67e22;
 }
 
-.section-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
+/* Sección Hero (Imagen principal) */
 .hero-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: #eef;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9;
     padding: 40px 20px;
-    border-radius: 10px;
-}
-
-.hero-text {
-    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image {
-    max-width: 90%;
+    max-width: 90%; /* Ajusta el tamaño de la imagen */
     height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Imágenes de secciones */
+.section-image {
+    max-width: 80%; /* Reduzco el tamaño de las imágenes */
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-form input, form button {
-    margin-top: 5px;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-form button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #0056b3;
-}
-
-/* Buttons */
+/* Botones */
 .button {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background: #007BFF;
+    background-color: #f39c12;
     color: white;
+    padding: 12px 25px;
     border-radius: 5px;
-    text-align: center;
-    font-size: 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background: #0056b3;
+    background-color: #e67e22;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+.return-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #333;
+    color: #f39c12;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.return-button:hover {
+    background-color: #e67e22;
+}
+
+/* Sección de Cotización */
+.quote-section,
+.issue-section,
+.services-section,
+.contact-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form {
     margin-top: 20px;
 }
-/* Animaciones */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #f39c12;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+button {
+    background-color: #f39c12;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Header Animación */
-header {
-    animation: slideDown 1s ease-out;
+button:hover {
+    background-color: #e67e22;
 }
 
-/* Botones Animación */
-.button {
-    animation: fadeIn 1.5s ease-in;
+/* Estilo para los servicios */
+.service-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h2 {
+    color: #e67e22;
+    font-size: 1.5em;
+}
+
+.service-item p {
+    color: #f39c12;
+}
+
+/* Estilo de formulario de contacto */
+.contact-form label {
+    display: block;
+    color: #e67e22;
+    margin-bottom: 8px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+}
+
+/* Animación en la imagen de la sección Hero */
+.hero-text h2 {
+    color: #f39c12;
+    font-size: 2.5em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #f39c12;
+}
+
+.hero-button {
+    background-color: #e67e22;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background-color: #d35400;
 }
