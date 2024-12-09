@@ -1,0 +1,21 @@
+/* _header.scss */
+
+/* Mixin para los estilos del encabezado */
+@mixin header-styles($bg-color, $text-color, $primary-color, $padding) {
+    background-color: $bg-color;
+    padding: $padding;
+    text-align: center;
+    border-bottom: 2px solid $border-color;
+
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin: 0;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+        color: darken($text-color, 20%);
+        margin-top: 10px;
+    }
+}

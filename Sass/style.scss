@@ -1,0 +1,17 @@
+//import reset
+@import "html/reset";
+//import home
+@import "html/home";
+
+/*estilo de header*/
+
+/* Importar el archivo de mixins */
+@import 'header';
+
+/* Aplicar el mixin al header */
+.main-header {
+    @include header-styles($background-color, $text-color, $primary-color, 20px);
+}
+
+
+
