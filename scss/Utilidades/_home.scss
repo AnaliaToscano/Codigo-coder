@@ -1,0 +1,130 @@
+// home.scss
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $hero-background; /* Fondo de la sección hero */
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h2 {
+    color: $primary-color;
+    font-size: $font-size-large;
+}
+
+.hero-text p {
+    font-size: $font-size-small;
+    color: $primary-color;
+}
+
+.hero-button {
+    background-color: $secondary-color;
+    padding: 15px 30px;
+    font-size: $font-size-base;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background-color: darken($secondary-color, 10%);
+}
+
+.section-image {
+    max-width: 80%; /* Ajuste de tamaño de las imágenes */
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Botones */
+.button {
+    background-color: $primary-color;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: $font-size-base;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: $button-hover-color;
+}
+
+.return-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: $header-background;
+    color: $primary-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.return-button:hover {
+    background-color: $button-hover-color;
+}
+
+/* Sección de Cotización */
+.quote-section,
+.issue-section,
+.services-section,
+.contact-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: $navbar-background;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    background-color: $header-background;
+    color: white;
+}
+
+button {
+    background-color: $primary-color;
+    border: none;
+    padding: 12px 25px;
+    font-size: $font-size-base;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: $button-hover-color;
+}
+
+/* Estilo para los servicios */
+.service-item {
+    background-color: $header-background;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h2 {
+    color: $secondary-color;
+    font-size: 1.5em;
+}
+
+.service-item p {
+    color: $primary-color;
+}

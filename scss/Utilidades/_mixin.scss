@@ -1,0 +1,32 @@
+// Mixin para botones
+@mixin button-styles($bg-color, $hover-color, $text-color: white) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 25px;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// Mixin para flexbox centralizado
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == small {
+        @media (max-width: 480px) { @content; }
+    } @else if $breakpoint == medium {
+        @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == large {
+        @media (max-width: 1024px) { @content; }
+    }
+}

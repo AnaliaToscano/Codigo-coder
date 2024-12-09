@@ -1,0 +1,45 @@
+// _reset.scss
+
+body {
+    font-family: $font-family;
+    background-color: $background-color; /* Color de fondo */
+    color: $primary-color; /* Color de texto */
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    text-align: center;
+    background-color: $header-background; /* Fondo del encabezado */
+    color: $primary-color;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: $navbar-background; /* Fondo de la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: $primary-color; /* Color de los enlaces */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: $button-hover-color; /* Color al pasar el ratón */
+}
