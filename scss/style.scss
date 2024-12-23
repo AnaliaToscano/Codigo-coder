@@ -8,3 +8,32 @@
 // Importar otros archivos, como home y mixins
 @import 'Utilidades/mixin';
 @import 'Utilidades/home';
+
+// Importar mixins
+@import 'mixins';
+
+// Usar mixin de estilos de botón
+.hero-button {
+    @include button-styles(#007BFF, #0056b3);
+}
+
+// Usar mixin de flexbox centralizado
+.hero-text {
+    @include flex-center;
+    flex-direction: column; // Añadir dirección de flex si es necesario
+}
+
+// Usar mixin de media queries
+.navbar ul li {
+    @include respond-to(small) {
+        display: block;
+        margin: 10px 0;
+    }
+    @include respond-to(medium) {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+    @include respond-to(large) {
+        margin: 0 15px;
+    }
+}
