@@ -1,199 +1,197 @@
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
-    background-color: $hero-background; /* Fondo de la sección hero */
-    padding: 40px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+}
+
+.navbar {
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Hero section */
+.section-imagen {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
 .hero-text h2 {
-    color: $primary-color;
-    font-size: $font-size-large;
+    font-size: 2rem;
 }
 
 .hero-text p {
-    font-size: $font-size-small;
-    color: $primary-color;
+    font-size: 1.2rem;
 }
 
 .hero-button {
-    background-color: $secondary-color;
-    padding: 15px 30px;
-    font-size: $font-size-base;
-    border-radius: 5px;
-    text-decoration: none;
+    background-color: #007BFF;
     color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
     margin-top: 20px;
 }
 
 .hero-button:hover {
-    background-color: darken($secondary-color, 10%);
+    background-color: #0056b3;
 }
 
-.section-image {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
-    max-width: 100%; /* Impide que la imagen se haga más grande que su contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para las imágenes */
-    object-fit: cover; /* Asegura que la imagen se recorte si es necesario para mantener su proporción */
-    margin: 20px 0;
-}
-
-/* Botones */
-.button {
-    background-color: $primary-color;
+/* Footer */
+footer {
+    background-color: #333;
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: $font-size-base;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: $button-hover-color;
-}
-
-.return-button {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: $header-background;
-    color: $primary-color;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.return-button:hover {
-    background-color: $button-hover-color;
-}
-
-/* Sección de Cotización */
-.quote-section,
-.issue-section,
-.services-section,
-.contact-section {
-    max-width: 1000px;
-    margin: auto;
+    text-align: center;
     padding: 20px;
-    background-color: $navbar-background;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-form {
-    margin-top: 20px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid $primary-color;
-    border-radius: 5px;
-    background-color: $header-background;
+footer a {
     color: white;
+    text-decoration: none;
 }
 
-button {
-    background-color: $primary-color;
-    border: none;
-    padding: 12px 25px;
-    font-size: $font-size-base;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+/* Media Queries para Responsividad */
+
+/* Pantallas grandes */
+@media (max-width: 1200px) {
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .hero-button {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
 }
 
-button:hover {
-    background-color: $button-hover-color;
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .navbar ul li {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
 }
 
-/* Estilo para los servicios */
-.service-item {
-    background-color: $header-background;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.service-item h2 {
-    color: $secondary-color;
-    font-size: 1.5em;
-}
-
-.service-item p {
-    color: $primary-color;
-}
-
-/* Media Queries */
+/* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        padding: 20px;
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero-text {
+        position: relative;
+        transform: translate(0, 0);
+        padding: 0 20px;
     }
 
     .hero-text h2 {
-        font-size: $font-size-medium;
+        font-size: 1.2rem;
     }
 
     .hero-text p {
-        font-size: $font-size-small;
+        font-size: 0.9rem;
     }
 
     .hero-button {
         padding: 10px 20px;
-        font-size: $font-size-small;
-    }
-
-    .section-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .quote-section,
-    .issue-section,
-    .services-section,
-    .contact-section {
-        padding: 15px;
+        font-size: 0.8rem;
     }
 }
 
+/* Pantallas muy pequeñas (móviles pequeños) */
 @media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+
     .hero-text h2 {
-        font-size: $font-size-small;
+        font-size: 1rem;
     }
 
     .hero-text p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .hero-button {
-        padding: 8px 16px;
+        padding: 8px 15px;
         font-size: 0.8rem;
     }
 
-    .button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-
-    .return-button {
-        font-size: 0.8rem;
-        padding: 8px 16px;
-    }
-
-    input, textarea {
-        padding: 8px;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
+    footer {
+        padding: 10px;
     }
 }
