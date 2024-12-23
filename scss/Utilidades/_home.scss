@@ -1,5 +1,3 @@
-// home.scss
-
 .hero-section {
     display: flex;
     align-items: center;
@@ -35,9 +33,12 @@
 }
 
 .section-image {
-    max-width: 80%; /* Ajuste de tamaño de las imágenes */
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    max-width: 100%; /* Impide que la imagen se haga más grande que su contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para las imágenes */
+    object-fit: cover; /* Asegura que la imagen se recorte si es necesario para mantener su proporción */
     margin: 20px 0;
 }
 
@@ -127,4 +128,72 @@ button:hover {
 
 .service-item p {
     color: $primary-color;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: $font-size-medium;
+    }
+
+    .hero-text p {
+        font-size: $font-size-small;
+    }
+
+    .hero-button {
+        padding: 10px 20px;
+        font-size: $font-size-small;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .quote-section,
+    .issue-section,
+    .services-section,
+    .contact-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: $font-size-small;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .return-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    input, textarea {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }

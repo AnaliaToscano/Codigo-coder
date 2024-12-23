@@ -1,32 +1,75 @@
-// Mixin para botones
-@mixin button-styles($bg-color, $hover-color, $text-color: white) {
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 12px 25px;
+/* Mixin para Bordes Redondeados */
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+/* Mixin para Sombra */
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+}
+
+/* Mixin para Ajuste de Imágenes */
+@mixin image-responsive($max-width: 100%, $border-radius: 10px) {
+    width: 100%;
+    max-width: $max-width;
+    height: auto;
     border-radius: $border-radius;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+/* Mixin para Botones */
+@mixin button-style($background-color, $padding: 12px 25px, $font-size: 16px, $color: white) {
+    background-color: $background-color;
+    color: $color;
+    padding: $padding;
+    font-size: $font-size;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 1.1em;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: $hover-color;
+        background-color: darken($background-color, 10%);
     }
 }
 
-// Mixin para flexbox centralizado
-@mixin flex-center {
+/* Mixin para Flexbox */
+@mixin flex-center($direction: row, $align-items: center, $justify-content: center) {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
 }
 
-// Mixin para media queries
-@mixin respond-to($breakpoint) {
-    @if $breakpoint == small {
-        @media (max-width: 480px) { @content; }
-    } @else if $breakpoint == medium {
-        @media (max-width: 768px) { @content; }
-    } @else if $breakpoint == large {
-        @media (max-width: 1024px) { @content; }
+/* Mixin para Formulario */
+@mixin form-input($padding: 10px, $border: 2px solid $primary-color, $border-radius: 5px) {
+    width: 100%;
+    padding: $padding;
+    margin-bottom: 20px;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: $header-background;
+    color: white;
+}
+
+/* Mixin para Estilo de Botón General */
+@mixin general-button($font-size: $font-size-base, $padding: 12px 25px) {
+    background-color: $primary-color;
+    border: none;
+    padding: $padding;
+    font-size: $font-size;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $button-hover-color;
+    }
+}
+
+/* Mixin para Media Query */
+@mixin media-query($max-width, $styles) {
+    @media (max-width: $max-width) {
+        #{$styles}
     }
 }
